@@ -72,6 +72,8 @@ char  *get_next_line(int fd)
   while (buffer[fd][0] || (bytes = read(fd, buffer[fd], BUFFER_SIZE)) > 0)
   {
     line = ft_strjoin(line, buffer[fd]);
+    if (!line)
+      return (NULL);
     if (update_buffer(buffer[fd]))
       break ;
   }
