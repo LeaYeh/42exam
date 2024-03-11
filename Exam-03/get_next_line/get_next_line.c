@@ -21,7 +21,7 @@ char  *ft_strjoin(char *s1, char *s2)
   int   j = 0;
   char  *new_str;
 
-  new_str = (char *)malloc(sizeof(char) * len + 1);
+  new_str = (char *)malloc(sizeof(char) * (len + 1));
   if (!new_str)
     return (free(s1), NULL);
   while (s1 && s1[i])
